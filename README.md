@@ -14,7 +14,7 @@ Model training can be controlled by a configuration file.
 <hr>
 
 Parameters:
-```
+
 model_config_path: location of model.yaml file
 
 How to generate configuration file
@@ -55,7 +55,8 @@ model_selection:
   
 ```
 Now update the content of model.yaml file with below content for testing.
-```
+
+```yaml
 grid_search:
   class: GridSearchCV
   module: sklearn.model_selection
@@ -128,7 +129,7 @@ Once grid search has been done for all model then every model with their tuned p
 Few of the function return type can be inferred using 
 below named tuple
 
-```
+```python
 InitializedModelDetail = namedtuple("InitializedModelDetail",
                                     ["model_serial_number", "model", "param_grid_search", "model_name"])
 
